@@ -402,21 +402,18 @@ body {
     max-width: 480px;
     margin-left: auto;
     margin-right: auto;
-    background-color: aqua;
   }
 }
 
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
-    background-color: red;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
-    background-color: yellow;
   }
 }
 
@@ -860,34 +857,12 @@ body {
   max-width: 696px;
 }
 
-.advantages__title {
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  margin-bottom: 10px;
-}
-
 .services__title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
-}
-
-.team__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.team__title-name {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.19;
-  margin-bottom: 10px;
 }
 
 .clients__title {
@@ -944,12 +919,24 @@ body {
 }
 
 .advantages {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  width: 100%;
+  background-color: var(--team-button-bg);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.advantages__list {
-  display: flex;
+@media screen and (min-width: 1200px) {
+  .advantages {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__img {
@@ -957,24 +944,54 @@ body {
   justify-content: center;
   align-items: center;
   background-color: var(--team-button-bg);
-  border-radius: 4px;
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
 }
 
 .advantages__item {
-  flex-basis: calc((100% - 4 * 30px) / 4);
+  margin-bottom: 30px;
 }
 
-.advantages__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .advantages__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages__item {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .advantages__item:nth-child(odd) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .advantages__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.advantages__title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .services {
-  padding-top: 94px;
   padding-bottom: 94px;
   padding-top: 0;
+}
+
+@media screen and (max-width: 1199px) {
+  .services {
+    display: none;
+  }
 }
 
 .services__list {
@@ -982,7 +999,7 @@ body {
 }
 
 .services__item {
-  flex-basis: calc((100% - 90px) / 3);
+  flex-basis: calc((100% - 60px) / 3);
 }
 
 .services__item:not(:last-child) {
@@ -1019,7 +1036,6 @@ body {
 
 @media screen and (min-width: 1200px) {
   .team {
-    max-width: 1200px;
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -1037,11 +1053,12 @@ body {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--main-cl);
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .team__item {
-    flex-basis: calc((100% / 2) - 60px);
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 
@@ -1053,7 +1070,8 @@ body {
 
 @media screen and (min-width: 1200px) {
   .team__item {
-    flex-basis: calc((100% - 4 * 30px)/4);
+    flex-basis: calc((100% - 3 * 30px) / 4);
+    margin-bottom: 0;
   }
 }
 
@@ -1066,6 +1084,32 @@ body {
 .team__info {
   padding-top: 30px;
   padding-bottom: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .team__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
+
+.team__title-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  margin-bottom: 10px;
 }
 
 .team__position {

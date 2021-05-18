@@ -1,10 +1,20 @@
 .advantages {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  width: 100%;
+  background-color: var(--team-button-bg);
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .advantages__list {
-  display: flex;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__img {
@@ -12,16 +22,37 @@
   justify-content: center;
   align-items: center;
   background-color: var(--team-button-bg);
-  border-radius: 4px;
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
 }
 
 .advantages__item {
-  flex-basis: calc((100% - 4 * 30px) / 4);
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  }
+
+  &:nth-child(odd) {
+    @media screen and (min-width: 768px) {
+      margin-right: 30px;
+    }
+  }
 
   &:not(:last-child) {
-    margin-right: 30px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+    }
   }
+}
+
+.advantages__title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
