@@ -1,0 +1,23 @@
+.nav__logo {
+  display: block;
+  font-family: var(--logo-font);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--accent-cl);
+  text-decoration: none;
+
+  &--black {
+    color: var(--header__logo-color);
+  }
+}
+
+.footer__logo {
+  @extend .nav__logo;
+  margin-bottom: 20px;
+
+  &--white {
+    color: var(--main-cl);
+  }
+}
