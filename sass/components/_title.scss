@@ -12,6 +12,13 @@
   max-width: 696px;
 }
 
+.advantages__title {
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
 .services__title {
   font-weight: 700;
   font-size: 36px;
@@ -20,13 +27,50 @@
   margin-bottom: 50px;
 }
 
+.team__title {
+  @media screen and (min-width: 480px) {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
+}
+
+.team__title-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  margin-bottom: 10px;
+}
+
+.team__position {
+  font-size: 16px;
+  line-height: 1.19;
+  color: var(--main-txt-cl);
+  margin-bottom: 16px;
+}
 
 .clients__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
   text-align: center;
-  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio__title {
@@ -49,6 +93,10 @@
   text-transform: uppercase;
   color: var(--main-cl);
   margin-bottom: 20px;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .follow__title {
@@ -59,4 +107,8 @@
   text-transform: uppercase;
   color: var(--main-cl);
   margin-bottom: 20px;
+  
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
