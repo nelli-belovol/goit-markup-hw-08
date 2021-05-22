@@ -1,5 +1,6 @@
 .nav {
   display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -7,9 +8,12 @@
 }
 
 .nav__menu {
-  display: flex;
-  align-items: center;
-  margin-right: auto;
+  display:none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+  }
 }
 
 .nav__item:not(:last-child) {

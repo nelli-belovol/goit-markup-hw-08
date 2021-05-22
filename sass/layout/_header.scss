@@ -1,14 +1,25 @@
-.header__container {
-  display: flex;
-  align-items: center;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  justify-content: space-between;
+.header {
+position: relative;
+  border-bottom: 1px solid var(--line-cl);
+
+  @media screen and (max-width: 767px) {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
-.header::after {
-  content: '';
-  display: block;
-  height: 1px;
-  background-color: var(--line-cl);
+.header__container {
+  display: flex;
+  justify-content: space-between;
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+    align-items: center;
+  }
 }
+
