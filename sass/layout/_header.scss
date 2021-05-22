@@ -1,19 +1,27 @@
 .header {
-position: relative;
+  position: relative;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
   border-bottom: 1px solid var(--line-cl);
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 480px) {
     padding-top: 16px;
     padding-bottom: 16px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px){
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  @media screen and (min-width: 1200px) {
     padding-top: 25px;
     padding-bottom: 25px;
   }
 }
 
-.header__container {
+.header__container { 
   display: flex;
   justify-content: space-between;
 
