@@ -34,6 +34,11 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
+
+  &:hover .menu-btn__icon-menu,
+  &:focus .menu-btn__icon-menu{
+    color: var(--accent-cl);
+  }
 }
 
 .menu-btn__icon-close {
@@ -45,6 +50,10 @@
 }
 
 .is-open .menu-btn__icon-menu {
+  display: none;
+}
+
+.modal-open .mobile-menu__btn{
   display: none;
 }
 
@@ -91,6 +100,10 @@
 
 .social__list--mobile {
   display: flex;
+
+  @media screen and (max-width:479px) {
+      flex-wrap: wrap;      
+  }
 }
 
 .social__item--mobile:not(:last-child) {
