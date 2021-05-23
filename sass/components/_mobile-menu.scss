@@ -34,6 +34,11 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
+
+  &:hover,
+  &:focus{
+    fill:var(--accent-cl);
+  }
 }
 
 .menu-btn__icon-close {
@@ -41,7 +46,6 @@
 
   .is-open & {
     display: block;
-    fill: currentColor;
   }
 }
 
