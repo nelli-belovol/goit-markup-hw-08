@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   background-color: var(--modal-bg);
-  z-index: 1;
+  z-index: 100;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -27,19 +27,17 @@
 
 .modal {
   position: fixed;
-  
   width: 100vw;
   height: 100vh;
   background-color: var(--main-cl);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-
+  padding: 40px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @media screen and (min-width: 480px) {
-    
-    max-width: 450px;
-    max-height: 609px;
+    width: 450px;
+    height: 609px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,24 +50,11 @@
   }
 }
 
-.modal__title {
-  display: block;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-top: 40px;
-  margin-right: 39px;
-  margin-left: 41px;
-  margin-bottom: 0px;
-}
-
 .modal__box {
   display: flex;
   flex-direction: column;
-  margin: 12px 40px 40px 40px;
-}
+  padding-top: 12px;
+  }
 
 .contact-form__field {
   position: relative;
@@ -94,14 +79,17 @@
   resize: none;
 
   &:placeholder-shown {
-    font-size: 12px;
-    line-height: 1.17;
+    font-size: 14px;
+    line-height: 1.14;
     letter-spacing: 0.01em;
-
     color: var(--placeholder-color);
-
     padding-top: 12px;
     padding-left: 16px;
+
+    @media screen and(min-width:1200px) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
   }
 
   &:not(:placeholder-shown) {
@@ -173,7 +161,14 @@
 .contact-form__checkbox-label {
   display: flex;
   align-items: center;
-  margin-left: 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 
   &::before {
     content: '';
@@ -207,8 +202,12 @@
   color: var(--accent-cl);
 }
 
-.contact-form__submit {
-  margin-top: 30px;
+.contact-form__submit{
+  margin-top: 31px;
+
+  @media screen and(min-width:1200px) {
+    margin-top: 30px;
+  }
 }
 
 .modal__btn-close {

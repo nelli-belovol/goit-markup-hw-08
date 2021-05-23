@@ -632,7 +632,7 @@ body.is-open {
   width: 100%;
   height: 100%;
   background-color: var(--modal-bg);
-  z-index: 1;
+  z-index: 100;
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -661,13 +661,14 @@ body.is-open {
   background-color: var(--main-cl);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 480px) {
   .modal {
-    max-width: 450px;
-    max-height: 609px;
+    width: 450px;
+    height: 609px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -682,23 +683,10 @@ body.is-open {
   }
 }
 
-.modal__title {
-  display: block;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-top: 40px;
-  margin-right: 39px;
-  margin-left: 41px;
-  margin-bottom: 0px;
-}
-
 .modal__box {
   display: flex;
   flex-direction: column;
-  margin: 12px 40px 40px 40px;
+  padding-top: 12px;
 }
 
 .contact-form__field {
@@ -724,12 +712,19 @@ body.is-open {
 }
 
 .contact-form__message:placeholder-shown {
-  font-size: 12px;
-  line-height: 1.17;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: var(--placeholder-color);
   padding-top: 12px;
   padding-left: 16px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-form__message:placeholder-shown {
+    font-size: 12px;
+    line-height: 1.17;
+  }
 }
 
 .contact-form__message:not(:placeholder-shown) {
@@ -793,7 +788,16 @@ body.is-open {
 .contact-form__checkbox-label {
   display: flex;
   align-items: center;
-  margin-left: 16px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-form__checkbox-label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .contact-form__checkbox-label::before {
@@ -828,7 +832,13 @@ body.is-open {
 }
 
 .contact-form__submit {
-  margin-top: 30px;
+  margin-top: 31px;
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-form__submit {
+    margin-top: 30px;
+  }
 }
 
 .modal__btn-close {
@@ -908,7 +918,7 @@ body.is-open {
   padding-right: 83px;
   padding-left: 40px;
   padding-bottom: 48px;
-  z-index: 99;
+  z-index: 97;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -926,7 +936,7 @@ body.is-open {
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: 100;
+  z-index: 98;
 }
 
 @media screen and (min-width: 768px) {
@@ -935,25 +945,22 @@ body.is-open {
   }
 }
 
-.mobile-menu__btn:hover .menu-btn__icon-menu,
-.mobile-menu__btn:focus .menu-btn__icon-menu {
-  color: var(--accent-cl);
-}
-
 .menu-btn__icon-close {
   display: none;
 }
 
 .is-open .menu-btn__icon-close {
   display: block;
+  fill: currentColor;
 }
 
 .is-open .menu-btn__icon-menu {
   display: none;
 }
 
-.modal-open .mobile-menu__btn {
-  display: none;
+.is-open .mobile-menu__btn:hover,
+.is-open .mobile-menu__btn:focus {
+  fill: var(--accent-cl);
 }
 
 .mobile-menu__list {
@@ -1007,10 +1014,15 @@ body.is-open {
 }
 
 .social__item--mobile:not(:last-child) {
-  margin-right: 20px;
+  padding-right: 10px;
+  border-right: 1px solid var(--border-form);
 }
 
-.social-link--mobile {
+.social__item--mobile:not(:first-child) {
+  padding-left: 10px;
+}
+
+.social__link--mobile {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.22;
@@ -1042,6 +1054,23 @@ body.is-open {
     max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
+  }
+}
+
+.modal__title {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal__title {
+    line-height: 1.3;
   }
 }
 
@@ -1466,6 +1495,7 @@ body.is-open {
 
 .filter__list {
   display: flex;
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1478,7 +1508,20 @@ body.is-open {
 @media screen and (min-width: 768px) {
   .filter__list {
     justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter__list {
     margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .filter__item:not(:last-child) {
+    margin-right: 8px;
+    margin-bottom: 15px;
   }
 }
 
@@ -1528,10 +1571,8 @@ body.is-open {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .portfolio__item:not(:last-child) {
-    margin-bottom: 30px;
-  }
+.portfolio__item:not(:last-child) {
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
