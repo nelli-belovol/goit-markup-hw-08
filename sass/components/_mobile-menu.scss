@@ -1,5 +1,8 @@
 .mobile-menu {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between ;
   top: 0;
   left: 100%;
   width: 100%;
@@ -58,10 +61,6 @@
   fill: var(--accent-cl);
 }
 
-.mobile-menu__list {
-  margin-bottom: 302px;
-}
-
 .nav__item--mobile:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -92,7 +91,7 @@
   color: var(--contacts-link-cl);
 
   &-tel {
-    @extend.contacts__link--mobile;
+    @extend .contacts__link--mobile;
     font-size: 34px;
     line-height: 1.18;
     color: var(--accent-cl);
