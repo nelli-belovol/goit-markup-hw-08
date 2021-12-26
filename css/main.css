@@ -540,7 +540,7 @@ body.is-open {
   background: var(--accent-cl);
   border-radius: 2px;
   position: absolute;
-  top: 46px;
+  top: 49px;
 }
 
 .nav__logo, .footer__logo {
@@ -1597,7 +1597,7 @@ body.is-open {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.filter__btn--active, .filter__btn:hover, .filter__btn:focus, .filter__btn--active:hover, .filter__btn--active:focus {
+.filter__btn--active {
   outline: var(--accent-cl);
   background-color: var(--accent-cl);
   color: var(--main-cl);

@@ -105,14 +105,14 @@
       <section class="portfolio">
         <div class="container portfolio__container">
           <h1 class="visually-hidden">Projects</h1>
-          <ul class="filter__list">
-            <li class="filter__item">
+          <ul class="filter__list controls">
+            <li id="btnAll" class="filter__item controls__item">
               <button type="button" class="filter__btn filter__btn--active">Все</button>
             </li>
-            <li class="filter__item"><button type="button" class="filter__btn">Веб-сайты</button></li>
-            <li class="filter__item"><button type="button" class="filter__btn">Приложения</button></li>
-            <li class="filter__item"><button type="button" class="filter__btn">Дизайн</button></li>
-            <li class="filter__item"><button type="button" class="filter__btn">Маркетинг</button></li>
+            <li id="btnWebSite" class="filter__item controls__item"><button type="button" class="filter__btn">Веб-сайты</button></li>
+            <li id="btnApp" class="filter__item controls__item"><button type="button" class="filter__btn">Приложения</button></li>
+            <li id="btnDesign" class="filter__item controls__item"><button type="button" class="filter__btn">Дизайн</button></li>
+            <li id="btnMarketing" class="filter__item controls__item"><button type="button" class="filter__btn">Маркетинг</button></li>
           </ul>
           <ul class="portfolio__list">
             <li class="portfolio__item">
@@ -434,5 +434,6 @@
       </div>   
     </footer> 
     <script src="./js/menu.js"></script>
+    <script src="./js/controls.js"></script>
   </body>
 </html>
